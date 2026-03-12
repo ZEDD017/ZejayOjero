@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Welcome to my Flask API!"
+    return "Hi ZEJAY POGI, Your app is running!"
 
 # GET endpoint with default student data
 @app.route('/student', methods=['GET'])
@@ -40,3 +40,4 @@ def add_student():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
