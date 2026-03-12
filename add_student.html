@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; padding: 50px; }
+        form { background: white; padding: 30px; border-radius: 10px; display: inline-block; }
+        input { padding: 10px; margin: 5px 0; width: 100%; }
+        button { padding: 10px 20px; background: #ff6b6b; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #ee5253; }
+        .error { color: red; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Add a New Student</h1>
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+    <form method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="number" name="grade" placeholder="Grade" required>
+        <input type="text" name="section" placeholder="Section" required>
+        <button type="submit">Add Student</button>
+    </form>
+</body>
+</html>
